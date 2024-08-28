@@ -7,7 +7,11 @@
 /public
 .pnp.js
 .yarn/install-state.gz
-
+.eslintrc.json
+next.config.mjs
+pnpm-lock.yaml
+postcss.config.mjs
+tailwind.config.ts
 # testing
 /coverage
 
