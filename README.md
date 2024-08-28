@@ -2,8 +2,8 @@
 
 ![npm](https://img.shields.io/npm/v/react-telegram-miniapp)
 ![license](https://img.shields.io/npm/l/react-telegram-miniapp)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/react-telegram-miniapp)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/react-telegram-miniapp)
+![GitHub stars](https://img.shields.io/github/stars/codedpro/react-telegram-miniapp)
+![GitHub issues](https://img.shields.io/github/issues/codedpro/react-telegram-miniapp)
 
 ## Overview
 
