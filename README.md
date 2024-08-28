@@ -93,7 +93,7 @@ app.post('/validate-webapp-data', (req, res) => {
 });
 ```
 
-## API Documentation
+## Documentation
 
 ### Components
 
@@ -193,6 +193,4 @@ Special thanks to the contributors and the Telegram team for their exceptional p
 Developed by [CodedPro](https://github.com/codedpro)
 
 ---
-
-This README is now more structured and user-friendly, with tables to enhance the readability of API documentation and additional sections for advanced usage and customization.
 
