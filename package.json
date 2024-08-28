@@ -1,5 +1,5 @@
 {
-  "name": "react-telegram-miniapp",
+  "name": "@codedpro/telegram-miniapp",
   "version": "0.1.0",
   "description": "a react/nextjs package that enables Every built in features of telegram miniapp including Events, Provider, Full Types, Custom Hooks and more ... ",
   "main": "dist/index.js",
