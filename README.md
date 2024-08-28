@@ -1,41 +1,43 @@
 # React Telegram MiniApp
 
-![npm](https://img.shields.io/npm/v/telegram-miniapp)
+![npm version](https://img.shields.io/npm/v/telegram-miniapp)
 ![license](https://img.shields.io/npm/l/telegram-miniapp)
 ![GitHub stars](https://img.shields.io/github/stars/codedpro/telegram-miniapp)
 ![GitHub issues](https://img.shields.io/github/issues/codedpro/telegram-miniapp)
 
 ## Overview
 
-**React Telegram MiniApp** is a lightweight, developer-friendly library that facilitates the integration of Telegram Mini Apps within React and Next.js projects. It provides convenient hooks, components, and utilities to work with Telegram WebApps API, allowing you to create rich, interactive experiences in Telegram.
+**React Telegram MiniApp** is a developer-centric library tailored for seamless integration of Telegram Mini Apps into React and Next.js projects. It provides a rich set of hooks, components, and utilities to work with the Telegram WebApps API, enabling the creation of highly interactive experiences within Telegram.
 
 ## Features
 
-- 🌟 **TelegramProvider**: A context provider to initialize and manage the state of the Telegram WebApp across your React components.
-- 🔄 **Custom Hooks**: Easily handle Telegram WebApp events like theme changes, button clicks, and more using provided hooks.
-- 🔐 **Data Validation**: Securely validate the data received from the Telegram WebApp on your backend with provided utilities.
-- 🛠️ **TypeScript Support**: Fully typed with TypeScript for a robust development experience.
-- 🎛️ **Custom Script Loader**: Automatically loads the Telegram WebApp script based on the environment (Next.js or standard React).
+- 🌟 **TelegramProvider**: Efficiently manage the Telegram WebApp context state across your React components.
+- 🔄 **Custom Hooks**: Simplified handling of Telegram WebApp events like theme changes, button interactions, and more.
+- 🔐 **Data Validation**: Securely validate data received from the Telegram WebApp on your backend.
+- 🛠️ **TypeScript Support**: Fully typed, ensuring a robust and type-safe development experience.
+- 🎛️ **Custom Script Loader**: Automatically loads the Telegram WebApp script based on the environment.
 
 ## Installation
 
-To install the package, use npm or yarn:
+Install the package using your preferred package manager:
 
 ```bash
-npm install react-telegram-miniapp
+npm install telegram-miniapp
 # or
-yarn add react-telegram-miniapp
+yarn add telegram-miniapp
+# or
+pnpm install telegram-miniapp
 ```
 
 ## Getting Started
 
 ### 1. Wrap Your Application with `TelegramProvider`
 
-In your main app component or any component that needs access to the Telegram WebApp context, wrap it with `TelegramProvider`.
+Wrap your main application component with `TelegramProvider` to initialize the Telegram WebApp context.
 
 ```tsx
 import React from 'react';
-import { TelegramProvider } from 'react-telegram-miniapp';
+import { TelegramProvider } from 'telegram-miniapp';
 
 const MyApp = ({ Component, pageProps }) => (
   <TelegramProvider>
@@ -46,30 +48,24 @@ const MyApp = ({ Component, pageProps }) => (
 export default MyApp;
 ```
 
-### 2. Use Hooks to Handle Telegram Events
+### 2. Utilize Hooks to Handle Telegram Events
 
-You can use the provided hooks to respond to various Telegram WebApp events:
+Leverage the provided hooks to manage various Telegram WebApp events:
 
 ```tsx
 import React from 'react';
-import { useThemeChanged, useMainButtonClicked } from 'react-telegram-miniapp';
+import { useThemeChanged, useMainButtonClicked } from 'telegram-miniapp';
 
 const MyComponent = () => {
-  // Handle theme change
   useThemeChanged(() => {
     console.log("Theme changed!");
   });
 
-  // Handle main button click
   useMainButtonClicked(() => {
     console.log("Main button clicked!");
   });
 
-  return (
-    <div>
-      <h1>Hello, Telegram User!</h1>
-    </div>
-  );
+  return <h1>Hello, Telegram User!</h1>;
 };
 
 export default MyComponent;
@@ -77,10 +73,10 @@ export default MyComponent;
 
 ### 3. Validate Telegram WebApp Data on the Backend
 
-You can securely validate data received from the Telegram WebApp using the `validateWebAppData` utility:
+Securely validate the data received from the Telegram WebApp using the `validateWebAppData` utility:
 
 ```typescript
-import { validateWebAppData } from 'react-telegram-miniapp';
+import { validateWebAppData } from 'telegram-miniapp';
 
 const botToken = 'YOUR_BOT_TOKEN';
 
@@ -101,51 +97,29 @@ app.post('/validate-webapp-data', (req, res) => {
 
 ### Components
 
-#### `TelegramProvider`
-
-- **Description**: Initializes and manages the state of the Telegram WebApp.
-- **Props**:
-  - `children`: ReactNode - The components wrapped by the provider.
+| Component          | Description                                                | Props                                        |
+|--------------------|------------------------------------------------------------|----------------------------------------------|
+| `TelegramProvider` | Initializes and manages the Telegram WebApp context.       | `children`: ReactNode - Components to wrap.  |
 
 ### Hooks
 
-#### `useThemeChanged`
-
-- **Description**: Hook to handle the `themeChanged` event.
-- **Usage**:
-
-```tsx
-useThemeChanged(() => {
-  // Handle theme change
-});
-```
-
-#### `useMainButtonClicked`
-
-- **Description**: Hook to handle the `mainButtonClicked` event.
-- **Usage**:
-
-```tsx
-useMainButtonClicked(() => {
-  // Handle main button click
-});
-```
-
-#### Other Hooks
-
-- `useViewportChanged`: Handles the `viewportChanged` event.
-- `useBackButtonClicked`: Handles the `backButtonClicked` event.
-- `useSettingsButtonClicked`: Handles the `settingsButtonClicked` event.
-- `useInvoiceClosed`: Handles the `invoiceClosed` event.
-- `usePopupClosed`: Handles the `popupClosed` event.
-- `useQrTextReceived`: Handles the `qrTextReceived` event.
-- `useScanQrPopupClosed`: Handles the `scanQrPopupClosed` event.
-- `useClipboardTextReceived`: Handles the `clipboardTextReceived` event.
-- `useWriteAccessRequested`: Handles the `writeAccessRequested` event.
-- `useContactRequested`: Handles the `contactRequested` event.
-- `useBiometricManagerUpdated`: Handles the `biometricManagerUpdated` event.
-- `useBiometricAuthRequested`: Handles the `biometricAuthRequested` event.
-- `useBiometricTokenUpdated`: Handles the `biometricTokenUpdated` event.
+| Hook                        | Description                                         | Example Usage                                                                                     |
+|-----------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| `useThemeChanged`           | Handles the `themeChanged` event.                   | `useThemeChanged(() => { console.log("Theme changed!"); });`                                       |
+| `useMainButtonClicked`      | Handles the `mainButtonClicked` event.              | `useMainButtonClicked(() => { console.log("Main button clicked!"); });`                            |
+| `useViewportChanged`        | Handles the `viewportChanged` event.                | `useViewportChanged((event) => { console.log("Viewport changed:", event); });`                     |
+| `useBackButtonClicked`      | Handles the `backButtonClicked` event.              | `useBackButtonClicked(() => { console.log("Back button clicked!"); });`                            |
+| `useSettingsButtonClicked`  | Handles the `settingsButtonClicked` event.          | `useSettingsButtonClicked(() => { console.log("Settings button clicked!"); });`                    |
+| `useInvoiceClosed`          | Handles the `invoiceClosed` event.                  | `useInvoiceClosed((event) => { console.log("Invoice closed:", event); });`                         |
+| `usePopupClosed`            | Handles the `popupClosed` event.                    | `usePopupClosed((event) => { console.log("Popup closed:", event); });`                             |
+| `useQrTextReceived`         | Handles the `qrTextReceived` event.                 | `useQrTextReceived((event) => { console.log("QR text received:", event.data); });`                 |
+| `useScanQrPopupClosed`      | Handles the `scanQrPopupClosed` event.              | `useScanQrPopupClosed(() => { console.log("QR scan popup closed!"); });`                           |
+| `useClipboardTextReceived`  | Handles the `clipboardTextReceived` event.          | `useClipboardTextReceived((event) => { console.log("Clipboard text received:", event.data); });`   |
+| `useWriteAccessRequested`   | Handles the `writeAccessRequested` event.           | `useWriteAccessRequested((event) => { console.log("Write access requested:", event.status); });`   |
+| `useContactRequested`       | Handles the `contactRequested` event.               | `useContactRequested((event) => { console.log("Contact requested:", event.status); });`            |
+| `useBiometricManagerUpdated`| Handles the `biometricManagerUpdated` event.        | `useBiometricManagerUpdated(() => { console.log("Biometric manager updated!"); });`                |
+| `useBiometricAuthRequested` | Handles the `biometricAuthRequested` event.         | `useBiometricAuthRequested((event) => { console.log("Biometric auth requested:", event.isAuthenticated); });` |
+| `useBiometricTokenUpdated`  | Handles the `biometricTokenUpdated` event.          | `useBiometricTokenUpdated((event) => { console.log("Biometric token updated:", event.isUpdated); });` |
 
 ### Utilities
 
@@ -155,22 +129,27 @@ useMainButtonClicked(() => {
 - **Parameters**:
   - `initData: string` - The data received from the WebApp.
   - `botToken: string` - Your bot’s token.
-  - `options?: ValidationOptions` - Optional configuration (e.g., expirationTime, logDetails).
-- **Returns**: `{ isValid: boolean, reason?: string, details?: Record<string, any> }`
-- **Usage**:
+- **Returns**: `{ isValid: boolean, reason?: string }`
+- **Example Usage**:
 
 ```typescript
-const validationResult = validateWebAppData(initData, botToken, { logDetails: true });
+const validationResult = validateWebAppData(initData, botToken);
+
+if (validationResult.isValid) {
+  console.log("Data is valid");
+} else {
+  console.log("Invalid data:", validationResult.reason);
+}
 ```
 
 ## Advanced Usage
 
-### Handling Multiple Events with Global Event Management
+### Centralized Event Management
 
-For more complex scenarios, you may want to manage multiple Telegram WebApp events centrally. You can achieve this by using a custom hook or a context for event management.
+To manage multiple Telegram WebApp events centrally, utilize a custom hook or context:
 
 ```typescript
-import { useGlobalEventManager } from 'react-telegram-miniapp';
+import { useGlobalEventManager } from 'telegram-miniapp';
 
 const { registerEvent, unregisterEvent } = useGlobalEventManager();
 
@@ -182,9 +161,9 @@ useEffect(() => {
 }, [registerEvent, unregisterEvent]);
 ```
 
-### Customizing Event Handling with Options
+### Customizing Event Handling
 
-You can customize how events are handled by passing options like `debounce`, `throttle`, `once`, and `debug`:
+Tailor event handling with options like `debounce`, `throttle`, `once`, and `debug`:
 
 ```typescript
 useThemeChanged(() => {
@@ -192,16 +171,14 @@ useThemeChanged(() => {
 }, { debounce: 300, debug: true });
 ```
 
-
 ### Debugging Tips
 
-- **Enable Debug Mode**: Pass `{ debug: true }` to any hook to log detailed information about events.
-- **Check Validation Failures**: When using `validateWebAppData`, inspect the `details` object in the return value to understand why validation failed.
+- **Enable Debug Mode**: Pass `{ debug: true }` to any hook to log detailed event information.
+- **Inspect Validation Failures**: When using `validateWebAppData`, check the `reason` to understand validation issues.
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/codedpro/telegram-miniapp/issues) if you want to contribute.
-
+We welcome contributions, issues, and feature requests! Check the [issues page](https://github.com/codedpro/telegram-miniapp/issues) to see how you can help.
 
 ## License
 
@@ -209,10 +186,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-Special thanks to the contributors and the Telegram team for their awesome platform.
+Special thanks to the contributors and the Telegram team for their exceptional platform.
 
 ---
 
 Developed by [CodedPro](https://github.com/codedpro)
 
 ---
+
+This README is now more structured and user-friendly, with tables to enhance the readability of API documentation and additional sections for advanced usage and customization.
+
