@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Telegram MiniApp
 
-## Getting Started
+![npm](https://img.shields.io/npm/v/react-telegram-miniapp)
+![license](https://img.shields.io/npm/l/react-telegram-miniapp)
+![GitHub stars](https://img.shields.io/github/stars/yourusername/react-telegram-miniapp)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/react-telegram-miniapp)
 
-First, run the development server:
+## Overview
+
+**React Telegram MiniApp** is a lightweight, developer-friendly library that facilitates the integration of Telegram Mini Apps within React and Next.js projects. It provides convenient hooks, components, and utilities to work with Telegram WebApps API, allowing you to create rich, interactive experiences in Telegram.
+
+## Features
+
+- 🌟 **TelegramProvider**: A context provider to initialize and manage the state of the Telegram WebApp across your React components.
+- 🔄 **Custom Hooks**: Easily handle Telegram WebApp events like theme changes, button clicks, and more using provided hooks.
+- 🔐 **Data Validation**: Securely validate the data received from the Telegram WebApp on your backend with provided utilities.
+- 🛠️ **TypeScript Support**: Fully typed with TypeScript for a robust development experience.
+- 🎛️ **Custom Script Loader**: Automatically loads the Telegram WebApp script based on the environment (Next.js or standard React).
+
+## Installation
+
+To install the package, use npm or yarn:
 
 ```bash
-npm run dev
+npm install react-telegram-miniapp
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+yarn add react-telegram-miniapp
