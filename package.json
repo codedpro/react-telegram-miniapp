@@ -1,21 +1,18 @@
 {
-  "name": "telegram-miniapp",
+  "name": "react-telegram-miniapp",
   "version": "0.1.0",
-  "description": "a react/nextjs package that enables Every built in features of telegram miniapp including Events, Provider, Full Types, Custom Hooks and more ... ",
+  "description": "A React/Next.js package that enables Telegram MiniApp features including Events, Provider, Full Types, Custom Hooks, and more.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && tsc",
-    "start": "next start",
-    "lint": "next lint",
+    "build": "tsc",
     "prepare": "npm run build"
   },
-  "dependencies": {
-    "next": "14.2.5",
+  "peerDependencies": {
+    "next": ">=14.0.0",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -25,8 +22,6 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
   "author": "CodedPro",

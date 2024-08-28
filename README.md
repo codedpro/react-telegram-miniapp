@@ -1,9 +1,9 @@
 # React Telegram MiniApp
 
-![npm version](https://img.shields.io/npm/v/telegram-miniapp)
-![license](https://img.shields.io/npm/l/telegram-miniapp)
-![GitHub stars](https://img.shields.io/github/stars/codedpro/telegram-miniapp)
-![GitHub issues](https://img.shields.io/github/issues/codedpro/telegram-miniapp)
+![npm version](https://img.shields.io/npm/v/react-telegram-miniapp)
+![license](https://img.shields.io/npm/l/react-telegram-miniapp)
+![GitHub stars](https://img.shields.io/github/stars/codedpro/react-telegram-miniapp)
+![GitHub issues](https://img.shields.io/github/issues/codedpro/react-telegram-miniapp)
 
 ## Overview
 
@@ -22,11 +22,11 @@
 Install the package using your preferred package manager:
 
 ```bash
-npm install telegram-miniapp
+npm install react-telegram-miniapp
 # or
-yarn add telegram-miniapp
+yarn add react-telegram-miniapp
 # or
-pnpm install telegram-miniapp
+pnpm install react-telegram-miniapp
 ```
 
 ## Getting Started
@@ -37,7 +37,7 @@ Wrap your main application component with `TelegramProvider` to initialize the T
 
 ```tsx
 import React from 'react';
-import { TelegramProvider } from 'telegram-miniapp';
+import { TelegramProvider } from 'react-telegram-miniapp';
 
 const MyApp = ({ Component, pageProps }) => (
   <TelegramProvider>
@@ -54,7 +54,7 @@ Leverage the provided hooks to manage various Telegram WebApp events:
 
 ```tsx
 import React from 'react';
-import { useThemeChanged, useMainButtonClicked } from 'telegram-miniapp';
+import { useThemeChanged, useMainButtonClicked } from 'react-telegram-miniapp';
 
 const MyComponent = () => {
   useThemeChanged(() => {
@@ -76,7 +76,7 @@ export default MyComponent;
 Securely validate the data received from the Telegram WebApp using the `validateWebAppData` utility:
 
 ```typescript
-import { validateWebAppData } from 'telegram-miniapp';
+import { validateWebAppData } from 'react-telegram-miniapp';
 
 const botToken = 'YOUR_BOT_TOKEN';
 
@@ -149,7 +149,7 @@ if (validationResult.isValid) {
 To manage multiple Telegram WebApp events centrally, utilize a custom hook or context:
 
 ```typescript
-import { useGlobalEventManager } from 'telegram-miniapp';
+import { useGlobalEventManager } from 'react-telegram-miniapp';
 
 const { registerEvent, unregisterEvent } = useGlobalEventManager();
 
@@ -178,7 +178,7 @@ useThemeChanged(() => {
 
 ## Contributing
 
-We welcome contributions, issues, and feature requests! Check the [issues page](https://github.com/codedpro/telegram-miniapp/issues) to see how you can help.
+We welcome contributions, issues, and feature requests! Check the [issues page](https://github.com/codedpro/react-telegram-miniapp/issues) to see how you can help.
 
 ## License
 
