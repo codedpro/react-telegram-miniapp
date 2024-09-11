@@ -1,0 +1,1 @@
+{"version":3,"file":"settingsButton.d.ts","sourceRoot":"","sources":["../../src/types/settingsButton.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,cAAc;IAC3B,SAAS,EAAE,OAAO,CAAC;IACnB,OAAO,CAAC,QAAQ,EAAE,MAAM,IAAI,GAAG,IAAI,CAAC;IACpC,QAAQ,CAAC,QAAQ,EAAE,MAAM,IAAI,GAAG,IAAI,CAAC;IACrC,IAAI,IAAI,IAAI,CAAC;IACb,IAAI,IAAI,IAAI,CAAC;CACd"}

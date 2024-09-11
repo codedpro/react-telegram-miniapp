@@ -1,0 +1,1 @@
+{"version":3,"file":"validateWebAppData.d.ts","sourceRoot":"","sources":["../../src/utils/validateWebAppData.ts"],"names":[],"mappings":"AAEA,MAAM,WAAW,gBAAgB;IAC/B,OAAO,EAAE,OAAO,CAAC;IACjB,MAAM,CAAC,EAAE,MAAM,CAAC;CACjB;AAED,eAAO,MAAM,kBAAkB,aACnB,MAAM,YACN,MAAM,KACf,gBAmCF,CAAC"}

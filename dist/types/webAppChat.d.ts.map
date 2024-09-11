@@ -1,0 +1,1 @@
+{"version":3,"file":"webAppChat.d.ts","sourceRoot":"","sources":["../../src/types/webAppChat.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,UAAU;IACvB,EAAE,EAAE,MAAM,CAAC;IACX,IAAI,EAAE,OAAO,GAAG,YAAY,GAAG,SAAS,CAAC;IACzC,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB"}
